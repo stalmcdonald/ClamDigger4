@@ -17,6 +17,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,7 +39,7 @@ public class TideFragment extends Fragment {
 		//create a view by overriding superclass
 		super.onCreateView(inflater, container, savedInstanceState);
 		//inflate view into current context...goes in tide.xml file and make into usable view
-		LinearLayout view = (LinearLayout) inflater.inflate(R.layout.tide, container, false);
+		RelativeLayout view = (RelativeLayout) inflater.inflate(R.layout.tide, container, false);
 		
 		Log.i(TAG, "onCreateView()");
 		Toast.makeText(view.getContext(), "TIDE FRAGMENT", Toast.LENGTH_SHORT).show();
