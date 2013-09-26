@@ -64,7 +64,7 @@ public class SecondActivity extends Activity  {
 	           Log.i("HISTORY READ",_history.toString());
 
 	      		//setting up views
-	           setContentView(R.layout.activity_two);
+	           setContentView(R.layout.clamfragment);
 	           b = (Button)findViewById(R.id.bPrediction);
 	           bLow = (Button)findViewById(R.id.bPredictionLow);
 	           bPrediction5 = (Button)findViewById(R.id.bPrediction);

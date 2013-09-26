@@ -21,7 +21,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class TideActivity extends Activity implements OnClickListener, TideFragment.TideDataListener, ClammersFragment.ClammerTipsListener{
+public class TideActivity extends Activity implements OnClickListener, TideFragment.TideDataListener{//, ClammersFragment.ClammerTipsListener{
 	
 	public static final String TAG = "TIDE ACTIVITY";
 	
@@ -31,7 +31,7 @@ public class TideActivity extends Activity implements OnClickListener, TideFragm
 	 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		//super.onCreate(savedInstanceState);
+		super.onCreate(savedInstanceState);
 		_context = this;
 
 		//inflates the tide fragment
