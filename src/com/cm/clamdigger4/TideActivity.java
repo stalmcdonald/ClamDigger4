@@ -21,7 +21,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class TideActivity extends Activity implements OnClickListener, TideFragment.TideDataListener{//, ClammersFragment.ClammerTipsListener{
+public class TideActivity extends Activity implements OnClickListener, TideFragment.TideDataListener, ClammersFragment.ClammerTipsListener{
 	
 	public static final String TAG = "TIDE ACTIVITY";
 	
@@ -53,22 +53,8 @@ public class TideActivity extends Activity implements OnClickListener, TideFragm
   			toast.show();
   			return;
   		}
-		
-//		/*
-//		 * Explicit Intent: Launches second activity.
-//		 */
-//		infoButton.setOnClickListener(new OnClickListener(){//setup onclick Listener
-//
-//			@Override
-//			public void onClick(View v) {
-//				// second activity launch
-//				Intent intent = new Intent(TideActivity.this, SecondActivity.class);
-//				startActivity(intent);
-//			}
-//			
-//		});
 			
-}
+}//end onCreate
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -92,6 +78,34 @@ public class TideActivity extends Activity implements OnClickListener, TideFragm
 				
 	}
 
+	/*
+	 * Explicit Intent: Launches Second Activity
+	 */
+	@Override
+	public void onLaunchSecondActivity() {
+		// Second Activity Launch
+		Log.i(TAG, "onLaunchSecondActivity()");
+		Toast.makeText(_context, TAG +", onLaunchSecondActivity()", Toast.LENGTH_SHORT).show();	
+		
+		Intent intent = new Intent(TideActivity.this, SecondActivity.class);
+		startActivity(intent);
+		
+	}
+	
+	/*
+	 * Web browsers Browse info on razor clam digging
+	 */
+	@Override
+	public void onLaunchImplicitIntent() {
+		// sends the user to site that shows more information on Razor Clam Digging
+		Uri uriUrl = Uri.parse("http://wdfw.wa.gov/fishing/shellfish/razorclams/howto_dig.html");
+		
+		Intent browse_intent = new Intent(Intent.ACTION_VIEW, uriUrl);
+		startActivity(browse_intent);
+		
+	}
+	
+	
 	/*
 	 * Random Clamming Tips
 	 */
@@ -119,33 +133,6 @@ public class TideActivity extends Activity implements OnClickListener, TideFragm
 		int randomTip = randomGenerator.nextInt(tips.length);
 		tip = tips[randomTip]; //get elements at index randomNumber
 		return tip;
-	}
-
-	/*
-	 * Web browsers Browse info on razor clam digging
-	 */
-	@Override
-	public void onLaunchImplicitIntent() {
-		// sends the user to site that shows more information on Razor Clam Digging
-		Uri uriUrl = Uri.parse("http://wdfw.wa.gov/fishing/shellfish/razorclams/howto_dig.html");
-		
-		Intent browse_intent = new Intent(Intent.ACTION_VIEW, uriUrl);
-		startActivity(browse_intent);
-		
-	}
-
-	/*
-	 * Explicit Intent: Launches Second Activity
-	 */
-	@Override
-	public void onLaunchSecondActivity() {
-		// Second Activity Launch
-		Log.i(TAG, "onLaunchSecondActivity()");
-		Toast.makeText(_context, TAG +", onLaunchSecondActivity()", Toast.LENGTH_SHORT).show();	
-		
-		Intent intent = new Intent(TideActivity.this, SecondActivity.class);
-		startActivity(intent);
-		
 	}
 
 
