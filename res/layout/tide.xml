@@ -1,27 +1,25 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg" >
-    
-    <fragment class="com.cm.clamdigger4.ClammersFragment"
-      android:id="@+id/clamz" 
-      android:layout_weight="1" 
-      android:layout_width="0dip" 
-      android:layout_height="0dip"/>
 
     <TextView
         android:id="@+id/note"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:text="@string/intro"
         android:textColor="#F4821F" />
 
     <Button
         android:id="@+id/infoButton"
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/note"
         android:layout_marginTop="14dp"
         android:text="@string/iBttn"
         android:textColor="#252333" />
@@ -29,16 +27,20 @@
     <Button
         android:id="@+id/browse"
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/infoButton"
         android:text="Guide to Digging Razor Clams"
         android:textColor="#252333" />
 
     <Button
         android:id="@+id/tButton"
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/browse"
         android:text="@string/tBttn"
         android:textColor="#252333" />
 
@@ -46,8 +48,10 @@
         android:id="@+id/clamTips"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
         android:text="The best time to dig for clams is Low Tide"
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-</LinearLayout>
+</RelativeLayout>
