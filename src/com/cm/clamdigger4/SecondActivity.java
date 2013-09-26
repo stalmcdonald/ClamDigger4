@@ -43,6 +43,7 @@ public class SecondActivity extends Activity  {
 		//pulling city tide prediction from the wunderground api
 		//string reference URL
 		static final String baseURL = "http://api.wunderground.com/api/3e64fa36c4f09bdd/tide/q/WA/";
+		public static final String TAG = "TIDE ACTIVITY";
 		
 		//text view will change for tide text
 		 TextView tvCity,tvPrediction, tvWater;
@@ -65,8 +66,8 @@ public class SecondActivity extends Activity  {
 	           _history = getHistory();
 	           Log.i("HISTORY READ",_history.toString());
 
-	      		//setting up views
-	           setContentView(R.layout.activity_two);
+	      		//setting up views 
+	           setContentView(R.layout.clamfragment);//launch fragment
 	           b = (Button)findViewById(R.id.bPrediction);
 	           bLow = (Button)findViewById(R.id.bPredictionLow);
 	           bPrediction5 = (Button)findViewById(R.id.bPrediction);
@@ -106,7 +107,7 @@ public class SecondActivity extends Activity  {
 	        	  		if(_connected){
 	        	  			Log.i("NETWORK CONNECTION ", WebFile.getConnnectionType(_context));
 	        	  		}else{
-	        	  			//notified if user isnt connected to the internet
+	        	  			//notified if user isn't connected to the Internet
 	        	  			Context context = getApplicationContext();
 	        	  			CharSequence text = "No Network Detected";
 	        	  			int duration = Toast.LENGTH_SHORT;
@@ -490,6 +491,17 @@ public class SecondActivity extends Activity  {
      
      view = view.findViewWithTag(R.id.class);
  }
+ 
+
+ public void onLaunchSecondActivity(){
+	// Second Activity Launch
+	Log.i(TAG, "onLaunchSecondActivity()");
+	Toast.makeText(_context, TAG +", onLaunchSecondActivity()", Toast.LENGTH_SHORT).show();	
+			
+	Intent intent = new Intent(this, SecondActivity.class);
+	startActivity(intent);
+			
+}
  
 
  

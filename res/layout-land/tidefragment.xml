@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:toos="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:background = "@drawable/bg">
+    
+    <fragment 
+    android:id="@+id/tide_fragment"
+    android:name= "com.cm.clamdigger4.TideFragment"
+    android:layout_weight= "2">
+    </fragment> 
+    
+
+	<fragment 
+    android:id="@+id/clam_fragment"
+    android:name= "com.cm.clamdigger4.ClammersFragment"
+    android:layout_weight= "1">
+    </fragment> 
+
+</LinearLayout>
