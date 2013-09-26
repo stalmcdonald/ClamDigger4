@@ -6,9 +6,9 @@
     
     <fragment class="com.cm.clamdigger4.ClammersFragment"
       android:id="@+id/clamz" 
-      android:layout_weight="3" 
+      android:layout_weight="1" 
       android:layout_width="0dip" 
-      android:layout_height="match_parent"/>
+      android:layout_height="0dip"/>
 
     <TextView
         android:id="@+id/note"
@@ -20,7 +20,7 @@
     <Button
         android:id="@+id/infoButton"
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
         android:text="@string/iBttn"
@@ -29,7 +29,7 @@
     <Button
         android:id="@+id/browse"
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guide to Digging Razor Clams"
         android:textColor="#252333" />
@@ -37,7 +37,7 @@
     <Button
         android:id="@+id/tButton"
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tBttn"
         android:textColor="#252333" />
