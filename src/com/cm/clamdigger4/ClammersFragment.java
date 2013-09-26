@@ -1,33 +1,23 @@
 package com.cm.clamdigger4;
 
-import java.util.Random;
-
-import com.cm.clamdigger4.ClammersFragment.ClammerTipsListener;
-
-import android.app.Activity;
 import android.app.Fragment;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
+//import com.cm.clamdigger4.ClammersFragment.ClammerTipsListener;
 
 public class ClammersFragment extends Fragment {
-	public static final String TAG = "CLAMMERS FRAGMENT";
-	
-	private ClammerTipsListener listener;
-	
-	public interface ClammerTipsListener {
-		public String onClammerTipsRequest();
-		public void onLaunchImplicitIntent();
-		public void onLaunchSecondActivity();
-	}
+//	public static final String TAG = "CLAMMERS FRAGMENT";
+//	
+//	private ClammerTipsListener listener;
+//	
+//	public interface ClammerTipsListener {
+//		public String onClammerTipsRequest();
+//		public void onLaunchImplicitIntent();
+//		public void onLaunchSecondActivity();
+//	}
 
 
 //	Button infoButton, tipsButton, browse;
