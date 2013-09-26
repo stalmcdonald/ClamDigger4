@@ -6,18 +6,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-//import com.cm.clamdigger4.ClammersFragment.ClammerTipsListener;
+import com.cm.clamdigger4.ClammersFragment.ClammerTipsListener;
 
 public class ClammersFragment extends Fragment {
-//	public static final String TAG = "CLAMMERS FRAGMENT";
+	public static final String TAG = "CLAMMERS FRAGMENT";
 //	
-//	private ClammerTipsListener listener;
-//	
-//	public interface ClammerTipsListener {
-//		public String onClammerTipsRequest();
-//		public void onLaunchImplicitIntent();
-//		public void onLaunchSecondActivity();
-//	}
+	private ClammerTipsListener listener;
+	
+	public interface ClammerTipsListener {
+		public String onClammerTipsRequest();
+		public void onLaunchImplicitIntent();
+		public void onLaunchSecondActivity();
+	}
 
 
 //	Button infoButton, tipsButton, browse;
