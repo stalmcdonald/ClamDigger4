@@ -3,11 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg" >
-    
-    <fragment class="com.cm.clamdigger4.ClammersFragment"
-       android:id="@+id/clamz" 
-      android:layout_width="wrap_content" 
-      android:layout_height="match_parent"/>
 
     <TextView
         android:id="@+id/note"
@@ -21,7 +16,7 @@
     <Button
         android:id="@+id/infoButton"
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/note"
@@ -32,7 +27,7 @@
     <Button
         android:id="@+id/browse"
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/infoButton"
@@ -42,7 +37,7 @@
     <Button
         android:id="@+id/tButton"
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/browse"
@@ -51,7 +46,7 @@
 
     <TextView
         android:id="@+id/clamTips"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
