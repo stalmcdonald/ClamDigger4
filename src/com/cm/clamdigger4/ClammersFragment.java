@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import com.cm.clamdigger4.ClammersFragment.ClammerTipsListener;
 
 public class ClammersFragment extends Fragment {
 	public static final String TAG = "CLAMMERS FRAGMENT";
@@ -18,9 +17,14 @@ public class ClammersFragment extends Fragment {
 		public void onLaunchImplicitIntent();
 		public void onLaunchSecondActivity();
 	}
+//private PredictionListener listener;
+//	
+//	public interface PredictionListener{
+//		public String onGrabPrediction();
+//		public void onGrabLocation();
+//	}
 
-
-//	Button infoButton, tipsButton, browse;
+//	Button b,bLow, bPrediction;
 //	TextView clammersTip;
 	//hold ui and interface elements
 	
@@ -34,34 +38,48 @@ public class ClammersFragment extends Fragment {
 		//inflate view into current context...goes in xml file and make into usable view
 	LinearLayout view = (LinearLayout) inflater.inflate(R.layout.activity_two, container, false);
 //		clammersTip = (TextView) getActivity().findViewById(R.id.clamTips);//replace getActivity with view?
-//		tipsButton = (Button) getActivity().findViewById(R.id.tButton);//replace getActivity with view?
-//		clammersTip = (TextView) getActivity().findViewById(R.id.clamTips);//replace getActivity with view? Is it necessary?
-//		
+//		b = (Button)findViewById(R.id.bPrediction);
+//    	bLow = (Button)findViewById(R.id.bPredictionLow);
+//    	bPrediction5 = (Button)findViewById(R.id.bPrediction);
+//		etCity = (EditText)findViewById(R.id.etCity);
+    
+//    tvCity = (TextView)findViewById(R.id.tvCity);
+//    tvPrediction = (TextView)findViewById(R.id.tvPrediction);
+//    tvWater = (TextView)findViewById(R.id.tvWater);
+//    tidesite = (TextView)findViewById(R.id.tidesite);//location
+//    calendar = (TextView)findViewById(R.id.calendar);//date
+//    tidepre = (TextView)findViewById(R.id.tidepre);//high or low tide
+//    waveheight = (TextView)findViewById(R.id.waveheight);//swell height
 		return view;
 	}
 //	
 //		/*
-//		 * Clamming Tips: Randomly selects tips on clamming.
+//		 * Tide Predictions:Get current tide.
 //		 */
 //		
-//		tipsButton.setOnClickListener(new OnClickListener(){
+//		b.setOnClickListener(new OnClickListener(){
 //			
 //			@Override
 //			public void onClick(View arg2) {
 //			
 //			Toast.makeText(getActivity(), TAG, Toast.LENGTH_SHORT).show();
-//			String tip = listener.onClammerTipsRequest();
+//			String predict = listener.onGrabPrediction();
 //			
 //			//update label with dynamic answer
-//			clammersTip.setText(tip);
+//			bPrediction.setText(predict);
+	 		//Displays update text here.
+//    		tidesite.setText("Location:              " +tideInfo);//location
+//    		calendar.setText("Date:                     "+date);//date
+//    		tidepre.setText("Tide Prediction:   "+tideType);//hi/lo 
+//    		waveheight.setText("Swell:                    "+tideHeight);//swell
 //			}
 //		
 //		});
 //		
 //		/*
-//		 * Intent: Launches Second Activity
+//		 * Tide Location: Get Location
 //		 */
-//		infoButton.setOnClickListener(new OnClickListener(){
+//		bLow.setOnClickListener(new OnClickListener(){
 //			@Override
 //			public void onClick(View v){
 //				
@@ -70,24 +88,7 @@ public class ClammersFragment extends Fragment {
 //		});
 //		
 //		
-//		/*
-//		 * Implicit Intent: Launches Web browsers to open website.
-//		 */
-//		
-//		browse.setOnClickListener(new OnClickListener() {
-//		@Override
-//		public void onClick(View interwebs) {
-//			// sends user to site that shows more information on Digging for razor clams
-//			Uri uriUrl = Uri.parse("http://wdfw.wa.gov/fishing/shellfish/razorclams/howto_dig.html");
-//			
-//			Intent browse_intent = new Intent(Intent.ACTION_VIEW, uriUrl);
-//			
-//			startActivity(browse_intent);
-//			
-//		}
-//	});
-//		return view;
-//	};
+
 	/*
 	 * Implement onAttach()
 	 * call the super
